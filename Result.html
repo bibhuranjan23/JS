@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findResult(){
+            /*
+                1. Get all element value into variables
+
+                2. Convert required value into number (integer or float)
+
+                3. Implement the logic
+                   Find Total
+                   Find Average
+                   Find Percentage
+
+                4. Display the result
+            */
+
+            var name = document.getElementById("txtName").value;
+            var rollno = document.getElementById("txtRoll").value;
+            var phy = parseFloat(document.getElementById("txtPhysics").value);
+            var chem = parseFloat(document.getElementById("txtChemistry").value);
+            var math = parseFloat(document.getElementById("txtMath").value);
+            var bio = parseFloat(document.getElementById("txtBiology").value);
+ 
+            var total = phy + chem + math + bio;
+            var average = total/4;
+            alert(parseFloat(total/400));
+            var percentage = parseFloat(total/400*100);
+            alert(percentage);
+            //Find Output displaying Elements
+            var x = document.getElementById("lblTotalMark");
+            var y = document.getElementById("lblAverageMark");
+            var z= document.getElementById("lblPercentage");
+
+            x.innerHTML = total;
+            y.innerHTML = average;
+            z.innerHTML = percentage +' %';
+
+        }
+        function ResetForm(){
+            document.getElementById("txtName").value ="";
+            document.getElementById("txtRoll").value ="";
+            document.getElementById("txtPhysics").value="";
+            document.getElementById("txtChemistry").value="";
+            document.getElementById("txtMath").value="";
+            document.getElementById("txtBiology").value="";
+            document.getElementById("lblTotalMark").innerHTML=0;
+            document.getElementById("lblAverageMark").innerHTML=0;;
+            document.getElementById("lblPercentage").innerHTML=0;
+            document.getElementById("txtName").focus();
+        }
+    </script>
+</head>
+<body>
+        <div class="container">
+           <table>
+            <tr>
+                <td>
+                    <label for="txtName">NAME</label>
+                </td>
+                <td>
+                    <input type="text" name="txtName" id="txtName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtRoll">Roll No</label>
+                </td>
+                <td>
+                    <input type="text" name="txtRoll" id="txtRoll">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtPhysics">Physics</label>
+                </td>
+                <td>
+                    <input type="number" name="txtPhysics" id="txtPhysics">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtChemistry">Chemistry</label>
+                </td>
+                <td>
+                    <input type="number" name="txtChemistry" id="txtChemistry">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtMath">Math</label>
+                </td>
+                <td>
+                    <input type="number" name="txtMath" id="txtMath">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <label for="txtBiology">Biology</label>
+                </td>
+                <td>
+                        <input type="number" name="txtBiology" id="txtBiology">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="findResult()">Find</button>
+                </td>
+                <td>
+                    <button onclick="ResetForm()">Reset</button>
+                </td>
+            </tr>
+           </table>   
+
+        </div>
+    
+    
+        <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <label for="">
+                            TOTAL MARK
+                        </label>
+                    </td>
+                    <td>
+                        <label id="lblTotalMark">0</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            AVERAGE MARK
+                        </label>
+                    </td>
+                    <td>
+                        <label id="lblAverageMark">0</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            PERCENTAGE
+                        </label>
+                    </td>
+                    <td>
+                        <label id="lblPercentage">0</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+ 
+   
+</body>
+</html>

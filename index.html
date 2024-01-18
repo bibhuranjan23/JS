@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+       var x;
+       let y;
+       const z=6;
+
+       console.log(x);
+       console.log(y);
+       console.log(z);
+
+       //z = 30;//Error
+       //console.log(z);
+
+       {
+          let p =90;
+          var q =80;
+          console.log("Inside the block:"+p);
+          console.log("Inside the block:"+q);
+       }
+       //console.log("Outside the block:"+p);//Error
+       console.log("Outside the block:"+q);
+    </script>
+   
+</body>
+</html>
